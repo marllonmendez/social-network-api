@@ -25,27 +25,16 @@ public class PostController {
 
     @PostMapping("/")
     public ResponseEntity create(@RequestBody PostModel postModel) {
-        // Verificações e validações necessárias
-
-        // Obtém o usuário pelo ID do JSON
         UserModel user = userRepository.findById(postModel.getUser().getId()).orElse(null);
 
         if (user == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuário não encontrado");
         }
 
-        // Cria a instância de PostModel apenas com texto e usuário
         postModel.setUser(user);
-
-
-        // Salva a postagem no repositório
         var postCreated = this.postRepository.save(postModel);
-
         return ResponseEntity.status(HttpStatus.CREATED).body(postCreated);
     }
-
-
-
 
     @GetMapping("/{id}")
     public ResponseEntity getPostById(@PathVariable Integer id) {
