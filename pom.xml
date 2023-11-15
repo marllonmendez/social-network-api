@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>social.network</groupId>
 	<artifactId>app</artifactId>
-	<version>0.1.0</version>
+	<version>0.3.2</version>
 	<name>app</name>
 	<description>Social Network</description>
 	<properties>

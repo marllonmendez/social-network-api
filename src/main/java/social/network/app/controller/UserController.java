@@ -1,6 +1,7 @@
 package social.network.app.controller;
 
 import social.network.app.model.UserModel;
+import social.network.app.repository.IPostRepository;
 import social.network.app.repository.IUserRepository;
 import social.network.app.utils.NullProperties;
 
@@ -17,6 +18,9 @@ public class UserController {
 
     @Autowired
     private IUserRepository userRepository;
+
+    @Autowired
+    private IPostRepository postRepository;
 
     @PostMapping("/")
     public ResponseEntity create(@RequestBody UserModel userModel) {
@@ -69,6 +73,7 @@ public class UserController {
         var user = this.userRepository.findById(id);
 
         if (user.isPresent()) {
+            this.postRepository.deleteByUserId(id);
             this.userRepository.deleteById(id);
             return ResponseEntity.status(HttpStatus.OK).body("Usuário deletado com sucesso");
         } else {

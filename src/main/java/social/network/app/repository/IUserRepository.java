@@ -11,5 +11,4 @@ public interface IUserRepository extends JpaRepository<UserModel, Integer> {
     UserModel findByName(String name);
     Optional<UserModel> findById(Integer id);
     List<UserModel> findAll();
-
 }
