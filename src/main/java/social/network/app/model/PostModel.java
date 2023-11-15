@@ -1,20 +1,27 @@
 package social.network.app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.*;
+
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
-@Entity(name = "post")
+@Entity(name = "posts")
 public class PostModel {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String user_id;
     private String text;
-    private Date created_at;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private UserModel user;
+
+    @CreationTimestamp
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 }
