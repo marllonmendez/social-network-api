@@ -28,7 +28,7 @@ Este comando irá baixar as dependências do projeto e construir o projeto. Ele 
 4. **Configuração de requisições HTTP**
 
 - Instale o [Insominia](https://insomnia.rest/)
-- configure e importe dentro do Insominia o projeto [Social Network](https://drive.google.com/file/d/10EU-jg9eyf4Oz6jjWWngtYwBenC7RRZx/view?usp=drive_link)
+- configure e importe dentro do Insominia o projeto [Social Network](https://drive.google.com/drive/folders/1DhlHWl9MLa2UqWuI5BDdnQJ5FctXjkAG?usp=sharing)
 - Agora com esse projeto é póssivel fazer as requisições necessárias para um CRUD
 
 5. **Limpeza do Projeto:**
