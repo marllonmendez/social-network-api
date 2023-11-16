@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>social.network</groupId>
 	<artifactId>app</artifactId>
-	<version>0.2.2-dev</version>
+	<version>0.2.3-dev</version>
 	<name>app</name>
 	<description>Social Network</description>
 	<properties>
@@ -30,13 +30,6 @@
 			<groupId>org.yaml</groupId>
 			<artifactId>snakeyaml</artifactId>
 			<version>2.2</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
@@ -73,13 +66,6 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
 			<scope>provided</scope>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/at.favre.lib/bcrypt -->
-		<dependency>
-			<groupId>at.favre.lib</groupId>
-			<artifactId>bcrypt</artifactId>
-			<version>0.10.2</version>
 		</dependency>
 	</dependencies>
 
