@@ -1,4 +1,4 @@
-# App Social Network
+# Social Network API
 
 <div align="center">
 
